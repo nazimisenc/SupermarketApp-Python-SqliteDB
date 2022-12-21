@@ -1,5 +1,3 @@
-print("Sqlite ile Supermarket Menusu yapma...")
-
 import sqlite3
 import time
 
@@ -19,7 +17,7 @@ class Product_List():
         self.create_connection()
 
     def create_connection(self):
-        self.connection = sqlite3.connect("SupermarketLib.db")
+        self.connection = sqlite3.connect("SupermarketLib.db") #We created database here.
         self.cursor = self.connection.cursor()
         text = "Create Table if not exists Products (brand TEXT,name TEXT,price FLOAT,weight INT,expiration_date TEXT)"
         self.cursor.execute(text)
