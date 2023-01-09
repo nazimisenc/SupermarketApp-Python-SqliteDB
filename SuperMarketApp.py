@@ -10,7 +10,7 @@ class Products():
         self.expiration_date = expiration_date
 
     def __str__(self):
-        return "Brand: {}\nName: {}\nPrice: {} TL\nWeight(g): {}g\nExpiration Date: {}\n".format(self.brand,self.name,self.price,self.weight,self.expiration_date)
+        return "Brand: {}\nName: {}\nPrice: {} TL\nWeight(g/L): {}\nExpiration Date: {}\n".format(self.brand,self.name,self.price,self.weight,self.expiration_date)
 
 class Product_List():
     def __init__(self):
@@ -119,7 +119,9 @@ while True:
 
         try:
             brand = input("Brand: ")
+            brand = brand.upper()
             name = input("Name: ")
+            name = name.upper()
             price = float(input("Price: "))
             weight = input("Weight: ")
             ed = input("Expiration Date: ")
